@@ -1,0 +1,210 @@
+
+.header {
+    
+    
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    
+    }
+
+
+.cabecalho_logo {
+  
+    margin-right: 1rem;
+
+
+}
+
+.carrinho_compras{
+
+    margin-left: 5rem;
+    margin-right: 1rem;
+}
+
+.avatar{
+
+    width: 60%;
+}
+
+#nav {
+    text-align: center;
+    order: -1;
+
+}
+
+
+
+#menu{
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 60%;
+    top:70px;
+    background-color: var(--white);
+    visibility: hidden;
+    overflow-y: hidden;
+    z-index: 10;
+   
+    
+    
+
+}
+
+#menu a {
+    display: flex;
+    padding: .5rem;
+    margin:  2rem;
+    font-size: 18px;
+    font-weight: 700;
+
+   
+
+   
+}
+
+#btn-mobile{
+    
+    display: flex;
+    padding: .5rem 1rem
+    font-size: 1rem;
+    border:none;
+    cursor: pointer;
+    margin: 1rem;
+
+    
+}
+
+#nav.active #menu {
+  height: 80vw;
+  visibility: visible;
+  overflow-y: auto;
+
+}
+
+#hamburger{
+display: block;
+border-top: 2px solid var(--black);
+width: 20px;
+
+}
+
+#hamburger::after , #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-top: 5px;
+    background: var(--black);
+    transition: .3s;
+    position: relative;
+}
+
+#nav.active #hamburger{ 
+
+    border-top-color: transparent;
+ }
+
+ #nav.active #hamburger::before{
+    transform: rotate(135deg);
+ }
+
+ #nav.active #hamburger::after{
+    transform: rotate(-135deg);
+    top:-7px;
+
+ }
+
+ 
+ 
+
+@media screen and  (min-width:1440px) {
+
+   header{
+    
+    
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 800px;
+
+    
+}
+    
+#header {
+    
+    color: var(--white);
+    width: 100%;
+    display: inline-block;
+    
+
+   
+    
+}
+
+.cabecalho__logo {
+    margin: 1.5rem;
+    width: 15vw;
+
+}
+
+#nav {
+    text-align: center;
+}
+
+#menu{
+
+    display: block;
+    width: 100%;
+    top:70px;
+    text-align: right;
+   margin-left: 2rem;
+    visibility: visible;
+    overflow-y: visible;
+    
+
+}
+
+#btn-mobile{
+    
+    display: none;
+
+}
+
+li {
+    display: inline-block;
+    font-size: 18px;
+    margin-top: -4rem;
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+
+   
+    
+
+   
+}
+
+.contact{
+
+    width: 10vw;
+    background:var(--white);
+    font-weight:bold;
+    font-size: 18px;
+    color: var(--very-dark-desaturated-blue);
+    text-transform: uppercase;
+    margin-right: 4rem;
+   
+
+
+    
+   
+ }
+
+.texto{
+
+    display: flex;
+
+}
+

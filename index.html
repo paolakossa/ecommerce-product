@@ -7,38 +7,111 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | E-commerce product page</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cabecalho.css">
+  <link rel="stylesheet" href="css/slide.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <header class="header">
 
-  Sneaker Company
+          <figure>
+            
+            <img src="images/logo.svg" alt="Logo E-commerce" class="cabecalho_logo">
 
-  Fall Limited Edition Sneakers
+          </figure>
+            
+            <nav id="nav">
+               <button id="btn-mobile">
+                <span id="hamburger"></span>
+                </button>
+                  <ul id="menu">
+                  <li><a href="#">Collections</a></li>
+                  <li><a href="#">Men</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  </ul>
+            </nav>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+            <figure>
+              
+              <img src="images/icon-cart.svg" alt="Carrinho de compras" class="carrinho_compras">
+            
+            </figure>
 
-  $125.00
-  50%
-  $250.00
+            <figure>
+              
+              <img src="images/image-avatar.png" alt="Imagem de um homem" class="avatar">
+            
+            </figure>
 
-  0
-  Add to cart
+  </header>
+
+  <main>
+     
+       <section class="slide">
+          
+           <ul class="slider">
+              <li>
+                
+                <input type="radio" id="slide1" name="slide" checked>
+                <label class="voltar" for="slide1"></label>
+                <img src="images/image-product-1.jpg" />
+              </li>
+              <li>
+                <input type="radio" id="slide2" name="slide">
+                <label for="slide2"></label>
+                <img src="images/image-product-2.jpg" />
+              </li>
+              <li>
+                <input type="radio" id="slide3" name="slide">
+                <label for="slide3"></label>
+                <img src="images/image-product-3.jpg" />
+              </li>
+              <li>
+                <input type="radio" id="slide4" name="slide">
+                <label class="frente" for="slide4"></label>
+                <img src="images/image-product-4.jpg" />
+              </li>
+            </ul>
+        </section>
+
+     
+      <section class="texto">
+
+        <h3>Sneaker Company</h3>
+
+        <h1>Fall Limited Edition Sneakers</h1>
+        
+
+      </section>  
+   
+  </main>        
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  
 </body>
 </html>
+
+<script>
+  
+const btnMobile = document.getElementById('btn-mobile');
+
+function toggleMenu(event){
+  if (event.type === 'touchstart') event.preventDefault();
+
+const nav = document.getElementById('nav'); 
+
+nav.classList.toggle('active');
+
+}
+
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
+
+</script>
