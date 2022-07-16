@@ -1,0 +1,72 @@
+.texto{
+
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.texto_sub{
+
+	color: var(--orange);
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.texto_til{
+
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+	font-weight: 700;
+	font-size: 30px;
+	flex-wrap: wrap;
+
+}
+
+.texto_par{
+
+	text-align: justify-all;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	color: var(--dark-grayish-blue);
+	font-size: 14px;
+	line-height: 1.5rem;
+	font-weight: 500;
+}
+
+.preco{
+
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	justify-content: space-between;
+}
+
+.preco_desc{
+
+	font-size: 22px;
+	font-weight: 700;
+
+}
+
+.desconto{
+
+	margin-right: 8rem;
+	font-size: 14px;
+	background-color: var(--pale-orange);
+	color: var(--orange);
+	font-weight: 700;
+}
+
+.preco_ant{
+
+	text-decoration: line-through;
+	font-size: 14px;
+	background-color: var(--ligth-grayish-blue);
+	color: var(--gravish-blue);
+}

@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/cabecalho.css">
   <link rel="stylesheet" href="css/slide.css">
-  <link rel="stylesheet" href="css/texto.css">
 
 
 </head>
@@ -93,43 +92,34 @@
      
       <section class="texto">
 
-        <h3 class="texto_sub">Sneaker Company</h3>
+        <h3>Sneaker Company</h3>
 
-        <h1 class="texto_til">Fall Limited Edition Sneakers</h1>
-
-        <p class="texto_par">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <h1>Fall Limited Edition Sneakers</h1>
+        
 
       </section>  
-
-      <section class="preco">
-        
-        <p class="preco_desc">$125.00</p>
-
-        <p class="desconto">50%</p>
-        
-        <p class="preco_ant">$250.00</p>
-
-      </section>
    
   </main>        
   
-  <script>
   
+</body>
+</html>
 
-      const btnMobile = document.getElementById('btn-mobile');
+<script>
+  
+const btnMobile = document.getElementById('btn-mobile');
 
-      function toggleMenu(event){
-        if (event.type === 'touchstart') event.preventDefault();
+function toggleMenu(event){
+  if (event.type === 'touchstart') event.preventDefault();
 
-      const nav = document.getElementById('nav'); 
+const nav = document.getElementById('nav'); 
 
-      nav.classList.toggle('active');
+nav.classList.toggle('active');
 
-      }
+}
 
-      btnMobile.addEventListener('click', toggleMenu);
-      btnMobile.addEventListener('touchstart', toggleMenu);
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
 
      
       var slideIndex = 1;
@@ -156,9 +146,8 @@
          dots[slideIndex-1].className += " active";
       }
 
+
+
+
+
 </script>
-
-</body>
-
-</html>
-
