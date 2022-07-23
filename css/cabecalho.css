@@ -228,50 +228,54 @@ width: 20px;
  
  
 
-@media screen and  (min-width:1440px) {
+@media screen and  (min-width:900px) {
 
-   header{
+  .header {
     
     
-    background-image: url(../images/desktop/image-header.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 800px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1rem;
+    
+    }
+
+.header_logo {
+    margin-left: 5rem
 
     
+
 }
-    
-#header {
-    
-    color: var(--white);
-    width: 100%;
-    display: inline-block;
-    
 
+.avatar{
+
+z-index: 99999;
    
-    
+
 }
 
-.cabecalho__logo {
-    margin: 1.5rem;
-    width: 15vw;
+.header__cart-icon{
 
+    margin-left: 60rem;
+    margin-top: 2rem;
+    z-index: 99999;
+    
 }
 
 #nav {
     text-align: center;
+
+
 }
 
 #menu{
 
-    display: block;
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    top:70px;
     text-align: right;
-   margin-left: 2rem;
+    margin-left: 15rem;
     visibility: visible;
-    overflow-y: visible;
-    
+    margin-top: -4rem;
 
 }
 
@@ -281,39 +285,8 @@ width: 20px;
 
 }
 
-li {
-    display: inline-block;
-    font-size: 18px;
-    margin-top: -4rem;
-    width: 6rem;
-    height: 6rem;
-    position: relative;
 
-   
-    
+  
 
    
 }
-
-.contact{
-
-    width: 10vw;
-    background:var(--white);
-    font-weight:bold;
-    font-size: 18px;
-    color: var(--very-dark-desaturated-blue);
-    text-transform: uppercase;
-    margin-right: 4rem;
-   
-
-
-    
-   
- }
-
-.texto{
-
-    display: flex;
-
-}
-

@@ -61,7 +61,7 @@
   <main>
      
        <section>
-          
+             <!-- Start Mobile Slider -->
           <div class="slideshow-container">
           <div class="mySlides fade">
          <img src="images/image-product-1.jpg" style="width:100%">
@@ -85,13 +85,52 @@
          </div>
          <a class="prev" onclick="plusSlides(-1)">❮</a>
          <a class="next" onclick="plusSlides(1)">❯</a>
-   </div>
-   <br>
-   <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-   </div>
+         </div>
+         <br>
+         <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+         </div>
+      <!-- End Mobile Slider -->
+        </section>
+
+        <section class="row flex">
+          
+          <!-- Start Desktop Slider -->
+            <div class="slider-desktop">
+                <div class="slider-desktop__active-photo">
+                    <img src="images/image-product-1.jpg" alt="Product" />
+                </div>
+                <div class="slider-desktop__thumbnails">
+                    <div class="slider-desktop__thumb slider-desktop__thumb--active" data-src = "images/image-product-1.jpg"><img src="images/image-product-1-thumbnail.jpg" alt="product thumbnail"></div>
+                    <div class="slider-desktop__thumb" data-src = "images/image-product-2.jpg"><img src="images/image-product-2-thumbnail.jpg" alt="product thumbnail"></div>
+                    <div class="slider-desktop__thumb" data-src = "images/image-product-3.jpg"><img src="images/image-product-3-thumbnail.jpg" alt="product thumbnail"></div>
+                    <div class="slider-desktop__thumb" data-src = "images/image-product-4.jpg"><img src="images/image-product-4-thumbnail.jpg" alt="product thumbnail"></div>
+                </div>
+            </div>
+
+            <div class="slider-lightbox">
+          <div class="slider-lightbox__active-photo">
+            <div class="slider-lightbox__close-icon"><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/></svg></div>
+            <img src="images/image-product-1.jpg" alt="Product" />
+            <div class="slider-lightbox__prev-btn">
+                <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+            </div>
+
+            <div class="slider-lightbox__next-btn">
+                <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+            </div>
+          </div>
+          <div class="slider-lightbox__thumbnails">
+            <div class="slider-lightbox__thumb slider-lightbox__thumb--active" data-src = "images/image-product-1.jpg"><img src="images/image-product-1-thumbnail.jpg" alt="product thumbnail"></div>
+            <div class="slider-lightbox__thumb" data-src = "images/image-product-2.jpg"><img src="images/image-product-2-thumbnail.jpg" alt="product thumbnail"></div>
+            <div class="slider-lightbox__thumb" data-src = "images/image-product-3.jpg"><img src="images/image-product-3-thumbnail.jpg" alt="product thumbnail"></div>
+            <div class="slider-lightbox__thumb" data-src = "images/image-product-4.jpg"><img src="images/image-product-4-thumbnail.jpg" alt="product thumbnail"></div>
+          </div>
+         </div>
+            <!-- End Desktop Slider -->
+
         </section>
 
      
@@ -131,179 +170,7 @@
    
   </main>        
   
-  <script>
-  
-      // Show the Menu Content When Click on Hamburger Icon
-      const btnMobile = document.getElementById('btn-mobile');
-
-      function toggleMenu(event){
-        if (event.type === 'touchstart') event.preventDefault();
-
-      const nav = document.getElementById('nav'); 
-
-      nav.classList.toggle('active');
-
-      }
-
-      btnMobile.addEventListener('click', toggleMenu);
-      btnMobile.addEventListener('touchstart', toggleMenu);
-
-     
-     // Slides mobile
-      var slideIndex = 1;
-      showSlides(slideIndex);
-      function plusSlides(n) {
-         showSlides(slideIndex += n);
-      }
-      function currentSlide(n) {
-         showSlides(slideIndex = n);
-      }
-      function showSlides(n) {
-         var i;
-         var slides = document.getElementsByClassName("mySlides");
-         var dots = document.getElementsByClassName("dot");
-         if (n > slides.length) {slideIndex = 1}
-         if (n < 1) {slideIndex = slides.length}
-         for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-         }
-         for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-         }
-         slides[slideIndex-1].style.display = "block";
-         dots[slideIndex-1].className += " active";
-      }
-
-
-     // Const's of de Cart 
-      const   cartBtn  = document.querySelector(".header__cart-icon");
-      const   incQtyBtn  = document.querySelector(".product-buy__increase-icon");
-      const   decQtyBtn  = document.querySelector(".product-buy__decrease-icon");
-      const   inpQty = document.getElementById("product-quantity");
-      const   addToCartBtn = document.querySelector(".product-buy__add-cart");
-      const   cartContent = document.querySelector(".cart-content");
-      let     emptyCartBtn;
-      let     currentImgIndex  = 0;
-
-
-      // Show Cart Content When Click on Cart Icon
-      cartBtn.addEventListener("click", () => {
-          const cartContent = document.querySelector(".cart-content");
-          alterClass(cartContent, "cart-content--visible", "toggle");
-      });
-
-
-      /** Cusomize Input DOM **/
-      // Increase Quantity Input Value When Click on plus Icon
-      incQtyBtn.addEventListener("click", incQty);
-      // Decrease Quantity Input Value When Click on Minus Icon
-      decQtyBtn.addEventListener("click", decQty);
-
-          /** Cart Processing **/
-          // Add Selected Product data when Click on button && check if button is there
-          addToCartBtn.addEventListener("click", addToCart);
-          // Remove Product data From Cart when click on Bin Icon
-          if(emptyCartBtn){emptyCartBtn.addEventListener("click", emptyCart)};
-
-          /*****
-              **  Main Functions  **
-          *****/
-          function alterClass(element, class_name, processName){
-              if(processName === "add"){
-                  element.classList.add(class_name);
-              }else if(processName === "remove"){
-                  if(element.classList.contains(class_name)){
-                      element.classList.remove(class_name);
-                  }
-              }else if(processName === "toggle"){
-                  element.classList.toggle(class_name);
-              }
-          }
-          function addOverlay(){
-              if(!document.body.contains(document.querySelector(".overlay"))){
-                  const overlayElement = document.createElement("div");
-                  overlayElement.classList.add("overlay");
-                  document.body.append(overlayElement);
-              }
-          }
-          function removeOverlay(){
-              if(document.body.contains(document.querySelector(".overlay"))){
-                  document.querySelector(".overlay").remove();
-              }
-          }
-
-          function incQty(){
-              inpQty.value++;
-          }
-          function decQty(){
-              if(inpQty.value > 0){
-                  inpQty.value--;
-              }
-          }
-          function addToCart(){
-              // Declare cart icon
-              const cartIcon = document.querySelector(".header__cart-icon");
-              // Create Span
-              const qtyDom = document.createElement("span");
-              // Get User Input Value
-              const qtyValue = Number(inpQty.value);
-              if(typeof qtyValue === "number" && qtyValue > 0){
-                  // Add Quantity Number to Span
-                  qtyDom.innerHTML = qtyValue;
-                  if(cartIcon.contains(cartIcon.querySelector("span"))){
-                      console.log("it contains");
-                      Array.from(cartIcon.querySelectorAll("span")).map((e)=>{
-                          e.remove();
-                      });
-                  }
-            // Add Quantity Span to Dom
-            cartIcon.appendChild(qtyDom);
-            // Add Product to Cart
-            cartContent.innerHTML = `
-            <h3 class="cart-content__heading">Cart</h3>
-            <div class="cart-content__full">
-                <div class="cart-content__product">
-                    <div class="cart-content__prod-img"><img src="images/image-product-1-thumbnail.jpg" alt="Product"></div>
-                    <div class="cart-content__prod-text">
-                        <h6>Autumn Limited Edition...</h6>
-                        <div class="cart-content__prod-price">$125.00 x ${qtyValue} <span>$${125.00 * qtyValue}</span></div>
-                    </div>
-                    <div class="cart-content__bin-icon">
-                        <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill-rule="nonzero" xlink:href="#a"/></svg>
-                    </div>
-                </div>
-                <button class="cart-content__btn">Checkout</button>
-            </div>`;
-            emptyCartBtn    = document.querySelector(".cart-content__bin-icon");
-            if(emptyCartBtn){emptyCartBtn.addEventListener("click", emptyCart)};
-        }else{
-            alert(`You can't Buy ${inpQty.value} Products`);
-        }
-    }
-            function emptyCart(){
-                // Declare cart icon
-                const cartIcon = document.querySelector(".header__cart-icon");
-                /** Empty Cart Icon **/
-                // check if cart icon contains Quantity span
-                if(cartIcon.contains(cartIcon.querySelector("span"))){
-                    console.log("it contains");
-                    // Loop through All of Quantity Span elements
-                    Array.from(cartIcon.querySelectorAll("span")).map((e)=>{
-                        // Remove Span Element
-                        e.remove();
-                    });
-                }
-                cartContent.innerHTML = `
-                    <h3 class="cart-content__heading">Cart</h3>
-                    <div class="cart-content__empty">
-                        Your cart is empty.
-                    </div>
-                `;
-            }
-
-
-
-</script>
+ <script src="js/app.js"></script>
 
 </body>
 

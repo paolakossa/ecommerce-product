@@ -79,16 +79,18 @@ body{
 }
 .nav__list{
     list-style: none;
+    
 }
 .nav__list li{
     padding: 1rem 0;
+
 }
 .nav__list li a{
     text-decoration: none;
     color: var(--very-dark-blue);
     font-size: var(--main-font-size);
     font-weight: 700;
-}
+   }
 .overlay{
     position: fixed;
     left: 0;
