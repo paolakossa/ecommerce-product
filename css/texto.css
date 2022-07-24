@@ -146,8 +146,12 @@
     margin-right: 0.5rem;
 }
 
+.attribution{
 
-
+    color: var(--orange);
+    text-align: center;
+    margin-top: 2rem;
+}
 
 
 
@@ -280,5 +284,12 @@
         background-color: var(--pale-orange);
         color: var(--orange);
         font-weight: 700;
+    }
+
+    .attribution{
+
+        color: var(--orange);
+        text-align: center;
+        margin-top: 2rem;
     }
 }
