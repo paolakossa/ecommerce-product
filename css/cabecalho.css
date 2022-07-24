@@ -235,12 +235,14 @@ width: 20px;
     
     display: flex;
     align-items: flex-end;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+
     
     }
 
 .header_logo {
-    margin-left: 5rem
+    margin-left: 25rem
 
     
 
@@ -249,13 +251,14 @@ width: 20px;
 .avatar{
 
 z-index: 99999;
-   
+
+
 
 }
 
 .header__cart-icon{
 
-    margin-left: 60rem;
+    margin-left: 40rem;
     margin-top: 2rem;
     z-index: 99999;
     
@@ -263,6 +266,7 @@ z-index: 99999;
 
 #nav {
     text-align: center;
+
 
 
 }
@@ -273,9 +277,10 @@ z-index: 99999;
     flex-direction: row;
     width: 100%;
     text-align: right;
-    margin-left: 15rem;
+    margin-left: 35rem;
     visibility: visible;
-    margin-top: -4rem;
+    margin-top: -2rem;
+
 
 }
 
@@ -286,7 +291,13 @@ z-index: 99999;
 }
 
 
-  
+  #menu a {
+
+    color: var(--gravish-blue);
+    font-size: 14px;
+    padding: 0;
+    
+  }
 
    
 }

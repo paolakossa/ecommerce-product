@@ -145,3 +145,126 @@
     transform: scale(0.7);
     margin-right: 0.5rem;
 }
+
+
+
+
+
+
+@media screen and  (min-width:900px){
+
+   
+  
+    .tex_desk{
+
+        display: flex;
+       
+        
+        
+    }
+    
+    .tex_button{
+
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: 50rem;
+        margin-top: 10rem;
+       
+        
+        
+        
+    }
+
+    
+    .price{
+
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        justify-content: start;
+        
+    }
+    
+    .product-buy__add-cart{
+        width: 15%;
+        background-color: var(--orange);
+        border-radius: 1rem;
+        /* padding: 1rem; */
+        height: 3rem;
+        color: #fff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        box-shadow: 0 10px 25px rgba(255, 125, 26, 0.35);
+        cursor: pointer;
+        margin-top: 1.5rem;
+        font-size: 16px;
+        font-weight: 700;
+    }
+   
+    #product-quantity[type=number]{
+        width: 100%;
+        background-color: var(--light-grayish-blue);
+        border-radius: 1rem;
+        border: none;
+        /* padding: 1.5rem; */
+        outline: none;
+        font-size: 16px;
+        text-align: center;
+        color: var(--very-dark-blue);
+        height: 7rem;
+        font-weight: 700;
+    }
+
+    .product-buy__increase-icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        width: 1.2rem;
+        cursor: pointer;
+    }
+    .product-buy__increase-icon img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .product-buy__decrease-icon{
+        position: absolute;
+        width: 1.2rem;
+        top: 50%;
+        left: 1.5rem;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .flex-parent{
+
+        display:flex;
+        
+        
+    }
+
+   
+   
+    .text_par{
+
+    text-align: justify;
+	margin-left: 1.5rem;
+    margin-right: 60rem;
+	color: var(--dark-grayish-blue);
+	font-size: 14px;
+	line-height: 1.5rem;
+	font-weight: 500;
+    
+    
+    }
+
+    .text_til{
+        margin-right: 60rem;
+    }
+}
